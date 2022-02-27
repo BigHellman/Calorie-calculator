@@ -1,8 +1,8 @@
-  def user_info():
-    kön = input('Vad är ditt kön?: ')
-    ålder = int(input('Vad är din ålder?: '))
-    längd = int(input('Hur lång är du i centimeter?: '))
-    vikt = int(input('Hur mycket väger du?: '))
+def user_info():
+    kön = input('Vad är ditt kön? ')
+    ålder = int(input('Vad är din ålder? '))
+    längd = int(input('Hur lång är du i centimeter? '))
+    vikt = int(input('Hur mycket väger du? '))
 
     if kön.lower() == 'man':
         c1 = 66
@@ -36,14 +36,14 @@ def kalkylera_träning(bmr_resultat):
     return(int(tränings_nivå))
 
 def gå_upp_eller_gå_ner(tränings_nivå):
-    mål = input('Vill du gå upp, ner eller hålla i vikt?: ')
+    mål = input('Vill du gå upp, ner eller hålla i vikt? ')
 
     if mål.lower() == 'gå ner':
         kalorier = tränings_nivå - 500
     elif mål.lower() == 'hålla':
         kalorier = tränings_nivå
     elif mål.lower() == 'gå upp':
-        gå_upp = int(input('Gå upp 0,5 eller 1 kilo i veckan? Skriv 0.5 eller 1: '))
+        gå_upp = int(input('Gå upp 0,5 eller 1 kilo i veckan? Skriv 0.5 eller 1 '))
         if gå_upp == 0.5:
             kalorier = tränings_nivå + 500
         elif gå_upp == 1:
@@ -53,17 +53,19 @@ def gå_upp_eller_gå_ner(tränings_nivå):
     
 gå_upp_eller_gå_ner(kalkylera_träning(user_info()))
 
-
-def trängins_pass(tränings_pass):
-    träningspass = input('Vad vill du träna idag? : Välj mellan rygg, bröst, ben, armar och axlar, rygg och bröst: ')
+def tränings_pass(tränings_övningar):
+    träningspass = input('Vad vill du träna idag? Välj mellan rygg, bröst, ben, armar och axlar, rygg och bröst ')
 
     if träningspass.lower() == 'rygg':
-        print('Stående rod, T-bar rod, Lats, En arms hantel rod, Rep pullover: ')
+        print('Stående rod, T-bar rod, Lats, En arms hantel rod, Rep pullover ')
     elif träningspass.lower() == 'bröst':
-        print('Bänkpress, Snebänk med hantlar, Kabel flys, Hantel flys, peckdeck: ')
+        print('Bänkpress, Snebänk med hantlar, Kabel flys, Hantel flys, Peckdeck ')
     elif träningspass.lower() == 'ben':
-        print('Benböj, RDLs, benpress, vader: ')
+        print('Benböj, RDLs, Benpress, Vader ')
     elif träningspass.lower() == 'armar och axlar':
-        print('axelpress, ')
+        print('Axelpress, Kabellyft åt sidan, Militärpress, Biceps curls, Hammer curls, Triceps pushdown, Dips ')
+    elif träningspass.lower() == 'rygg och bröst':
+        print('Snehantel press, Kabel flys, pecdeck, Stående rodd, Lats pulldown, Rep pullover ')
 
-    return(int(tränings_pass))
+tränings_pass(tränings_pass(user_info))
+
