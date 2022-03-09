@@ -17,5 +17,8 @@ För att starta programmet behöver man "run Pyhton file"
 ## Att göra
 Lägga till exempel på vad man kan äta för olika mat rätter som kan äta.
 
+## Att bidra
+Just nu tar jag inte imot några pull request just nu men i framtiden kommer jag ta imot pull request.
+
 ## Licens 
 [MIT] (https://choosealicense.com/licenses/mit/)
