@@ -1,6 +1,6 @@
 # Calorie-calculator
 
-## språk
+## Språk
 Projektet är skrivet i Pyhton kod.
 
 ## Beskriving 
